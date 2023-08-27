@@ -21,7 +21,13 @@ Route::get('/', function () {
 });
 
 Route::get('/products/{id}',function($id){
-    return view('product',[
-        'product' => Product::find($id)
-    ]);
+    $product = Product::find($id);
+    if($product){
+        return view('product',[
+            'product' => $product
+        ]);
+    }else{
+        abort('404');
+    }
+
 });
