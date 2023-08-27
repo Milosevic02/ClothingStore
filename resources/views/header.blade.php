@@ -43,7 +43,7 @@
         </div>
     </header>
 
-    <main class="container mt-5">
+    <main>
         @yield('content')
     </main>
     
