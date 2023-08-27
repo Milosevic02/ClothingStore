@@ -1,5 +1,4 @@
 <x-header>
-@include('partials._hero')
 <a href="/" class="btn btn-primary">
     <i class="fas fa-arrow-left"></i> Back
   </a>

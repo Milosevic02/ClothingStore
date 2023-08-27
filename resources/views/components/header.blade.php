@@ -45,6 +45,8 @@
     </header>
 
     <main>
+        @include('partials._hero')
+
         {{$slot}}
     </main>
     

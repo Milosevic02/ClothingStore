@@ -1,5 +1,4 @@
 <x-header>
-@include('partials._hero')
 @include('partials._search')
 <div class="container ">
 
