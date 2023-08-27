@@ -11,20 +11,8 @@
     </div>
     <div class="col-lg-6">
         <h2>{{$product['name']}}</h2>
-        <ul class="list-inline">
-            <li class="list-inline-item bg-dark text-white rounded-pill py-1 px-3 mr-2">
-                <a href="#" style="color: white;">T-Shirt</a>
-            </li>
-            <li class="list-inline-item bg-dark text-white rounded-pill py-1 px-3 mr-2">
-                <a href="#" style="color: white;">Lacoste</a>
-            </li>
-            <li class="list-inline-item bg-dark text-white rounded-pill py-1 px-3 mr-2">
-                <a href="#" style="color: white;">L</a>
-            </li>
-            <li class="list-inline-item bg-dark text-white rounded-pill py-1 px-3 mr-2">
-                <a href="#" style="color: white;">Black</a>
-            </li>
-        </ul>
+        <x-tags :tagsCsv="$product->tags" />
+
         <h5>
             <p style="font-weight: bold;">Price: ${{$product['price']}}</p>
 
