@@ -10,7 +10,8 @@ class ProductController extends Controller
     //Show all Products
     public function index(){
         return view('products.index',[
-            'products' => Product::latest()->filter(request(['tag','search']))->get()
+            'products' => Product::latest()->filter(request(['tag','search']))
+            ->paginate(2)
         ]);
     }
 

@@ -13,8 +13,14 @@
             </div>
         @endunless
     </div>
-    
+    <div class="mt-4 d-flex justify-content-center">
+        {{$products->links()}}
+    </div>
+
 </div>
+
+
 </x-header>
+
 
 
