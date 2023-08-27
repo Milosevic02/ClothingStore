@@ -1,17 +1,16 @@
 @extends('header')
-@extends('footer')
 @section('content')
-
-@foreach ($products as $product)
+<div class="container">
+    @foreach ($products as $product)
 
     <h1>
         <a href="/products/{{$product->id}}">{{$product->name}}
     </h1>
+</div>
+
 
     
 @endforeach
+@endsection
 
-@endsection
-@section('end_content')
-    
-@endsection
+
