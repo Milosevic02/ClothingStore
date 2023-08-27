@@ -1,6 +1,9 @@
 @extends('header')
 @include('partials._hero')
 @section('content')
+<a href="/" class="btn btn-primary">
+    <i class="fas fa-arrow-left"></i> Back
+  </a>
 <div class="container">
 <div class="row">
     <div class="col-lg-6">
@@ -8,8 +11,24 @@
     </div>
     <div class="col-lg-6">
         <h2>{{$product['name']}}</h2>
-        <p>Size:{{$product['size']}}</p>
-        <p>Price: ${{$product['price']}}</p>
+        <ul class="list-inline">
+            <li class="list-inline-item bg-dark text-white rounded-pill py-1 px-3 mr-2">
+                <a href="#" style="color: white;">T-Shirt</a>
+            </li>
+            <li class="list-inline-item bg-dark text-white rounded-pill py-1 px-3 mr-2">
+                <a href="#" style="color: white;">Lacoste</a>
+            </li>
+            <li class="list-inline-item bg-dark text-white rounded-pill py-1 px-3 mr-2">
+                <a href="#" style="color: white;">L</a>
+            </li>
+            <li class="list-inline-item bg-dark text-white rounded-pill py-1 px-3 mr-2">
+                <a href="#" style="color: white;">Black</a>
+            </li>
+        </ul>
+        <h5>
+            <p style="font-weight: bold;">Price: ${{$product['price']}}</p>
+
+        </h5>
         <form action="" method = "post">
             <input type="number" name="quantity" required style="background-color: #f1f1f1; border: 1px solid #ccc; padding: 5px;">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >Add to Cart</button>
