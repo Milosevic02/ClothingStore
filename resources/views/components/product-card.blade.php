@@ -9,20 +9,7 @@
             <div class="col-md-8">
                 <h3 class="h4">{{ $product->name }}</h3>
                 <div class="h5 font-weight-bold mb-3">${{ $product->price }}</div>
-                <ul class="list-inline">
-                    <li class="list-inline-item bg-dark text-white rounded-pill py-1 px-3 mr-2">
-                        <a href="#" style="color: white;">T-Shirt</a>
-                    </li>
-                    <li class="list-inline-item bg-dark text-white rounded-pill py-1 px-3 mr-2">
-                        <a href="#" style="color: white;">Lacoste</a>
-                    </li>
-                    <li class="list-inline-item bg-dark text-white rounded-pill py-1 px-3 mr-2">
-                        <a href="#" style="color: white;">L</a>
-                    </li>
-                    <li class="list-inline-item bg-dark text-white rounded-pill py-1 px-3 mr-2">
-                        <a href="#" style="color: white;">Black</a>
-                    </li>
-                </ul>
+                <x-tags :tagsCsv="$product->tags" />
                 <div class="mt-3">
                     <a href="/products/{{ $product->id }}" class="btn btn-primary">View Product</a>
                 </div>
