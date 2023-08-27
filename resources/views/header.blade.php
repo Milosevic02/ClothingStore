@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/logo2.png" />
+    <link rel="icon" href={{asset('images/logo2.png') }}/>
 
     <title>Mens Boutique</title>
 
@@ -21,7 +21,7 @@
     <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
             <a href="/" class="navbar-brand">
-                <img src="images/logo2.png" alt="" class="logo" style="height: 80px; width: auto;">
+                <img src={{asset('images/logo2.png')}} alt="" class="logo" style="height: 80px; width: auto;">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav">
                 <span class="navbar-toggler-icon"></span>
