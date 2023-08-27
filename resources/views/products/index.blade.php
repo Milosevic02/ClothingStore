@@ -1,7 +1,6 @@
-@extends('header')
+<x-header>
 @include('partials._hero')
 @include('partials._search')
-@section('content')
 <div class="container ">
 
     <div class="row">
@@ -17,6 +16,6 @@
     </div>
     
 </div>
-@endsection
+</x-header>
 
 

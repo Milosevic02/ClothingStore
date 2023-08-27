@@ -1,6 +1,5 @@
-@extends('header')
+<x-header>
 @include('partials._hero')
-@section('content')
 <a href="/" class="btn btn-primary">
     <i class="fas fa-arrow-left"></i> Back
   </a>
@@ -39,4 +38,4 @@
     </div>
 </div>
 </div>
-@endsection
+</x-header>
