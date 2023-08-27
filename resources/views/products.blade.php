@@ -1,5 +1,6 @@
 @extends('header')
 @include('partials._hero')
+@include('partials._search')
 @section('content')
 <div class="container">
     @foreach ($products as $product)
