@@ -1,39 +1,22 @@
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-crossorigin="anonymous"
-referrerpolicy="no-referrer"
-/>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-    theme: {
-        extend: {
-            colors: {
-                laravel: "#ef3b2d",
-            },
-        },
-    },
-};
-</script>
+<section class="position-relative h-76" style="background-color: rgb(153, 88, 245);">
+    <div class="position-absolute top-0 start-0 w-full h-full opacity-10 bg-no-repeat bg-center" ></div>
 
-<section class="relative h-72 flex flex-col justify-center align-center text-center space-y-4 mb-4" style = "background-color: rgba(115,78,235,255) ">
-    <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-no-repeat bg-center" style="background-color: rgba(200, 160, 255, 1)"></div>
-
-    <div class="z-10">
-        <h1 class="text-6xl font-bold uppercase text-black">
-            MEN'S<span class="ml-4 text-red-500">BOUTIQUE</span>
+    <div class="d-flex flex-column justify-content-center align-items-center text-center space-y-4 mb-4 text-white">
+        <h1 class="display-3 fw-bold text-black">
+            MEN'S<span class="ms-4 text-danger">BOUTIQUE</span>
         </h1>
-        <p class="text-2xl text-gray-200 font-bold my-4">
+        <p class="h3 fw-bold my-4">
             Find the best items for yourself
         </p>
         <div>
-            <a href="register.html" class="inline-block border-2 border-white text-white py-2 px-4 rounded-xl uppercase mt-2 hover:text-black hover:border-black">
+            <a href="register.html" class="mb-4 btn btn-outline-light py-2 px-4 rounded-xl text-uppercase mt-2 hover-text-black hover-border-black">
                 Sign Up to make an order
             </a>
         </div>
     </div>
 </section>
+
+
+
 
 
