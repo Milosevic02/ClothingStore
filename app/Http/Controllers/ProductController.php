@@ -10,7 +10,7 @@ class ProductController extends Controller
     //Show all Products
     public function index(){
         return view('products.index',[
-            'products' => Product::all()
+            'products' => Product::latest()->filter(request(['tag']))->get()
         ]);
     }
 
@@ -20,4 +20,6 @@ class ProductController extends Controller
             'product' => $product
         ]);
     }
+
+
 }
