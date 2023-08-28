@@ -28,17 +28,42 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ">
+                    @auth
+                    <li class="nav-item mt-2">
+                        <span style="font-weight: bold; text-transform: uppercase;">
+                            Welcome <span style="margin-right: 10px;color: red;">{{ auth()->user()->name }}</span>
+                        </span>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="/products/myorders" class="nav-link">
+                            <i class="bi bi-person-plus"></i> <span style="font-weight: bold;">My Orders</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/products/cart" class="nav-link">
+                            <i class="bi bi-person"></i> <span style="font-weight: bold;">Cart</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <form action="/logout" method="POST">
+                            @csrf
+                            <button class="btn btn-danger" type="submit">Logout</button>
+                        </form>
+                    </li>
+                    @else
                     <li class="nav-item">
                         <a href="/register" class="nav-link">
-                            <i class="bi bi-person-plus"></i> Register
+                            <i class="bi bi-person-plus"></i> <span style="font-weight: bold;">Register</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="/login" class="nav-link">
-                            <i class="bi bi-person"></i> Login
+                            <i class="bi bi-person"></i> <span style="font-weight: bold;">Login</span>
                         </a>
                     </li>
+                    @endauth
                 </ul>
             </div>
         </div>
