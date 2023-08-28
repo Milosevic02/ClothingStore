@@ -30,12 +30,12 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="register.php" class="nav-link">
+                        <a href="/register" class="nav-link">
                             <i class="bi bi-person-plus"></i> Register
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="login.php" class="nav-link">
+                        <a href="/login" class="nav-link">
                             <i class="bi bi-person"></i> Login
                         </a>
                     </li>
@@ -45,7 +45,6 @@
     </header>
 
     <main>
-        @include('partials._hero')
 
         {{$slot}}
     </main>
