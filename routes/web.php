@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\ProductController;
-use Illuminate\Support\Facades\Route;
 use App\Models\Product;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,13 @@ use App\Models\Product;
 |
 */
 
+//All Products
 Route::get('/', [ProductController::class,'index']);
 
+//Single Products
 Route::get('/products/{product}',[ProductController::class,'show']);
+
+//Show Register Form
+Route::get('/register',[UserController::class,'register']);
+
 
