@@ -12,14 +12,6 @@
         </div>
 
         <div class="form-group mb-3">
-            <label for="username">Username</label>
-            <input type="text" class = "form-control" id = "username" name = "username" required>
-            @error('username')
-                <p class="text-danger mt-1">{{$message}}</p>    
-            @enderror
-        </div>
-
-        <div class="form-group mb-3">
             <label for="email">Email address</label>
             <input type="text" class = "form-control" id = "email" name = "email" required>
             @error('email')
@@ -28,14 +20,14 @@
         </div>
 
         <div class="form-group mb-3">
-            <label for="password">Confirm Password</label>
+            <label for="password">Password</label>
             <input type="password" class = "form-control" id = "password" name = "password" required>
             @error('password')
                 <p class="text-danger mt-1">{{$message}}</p>    
             @enderror
         </div>
         <div class="form-group mb-3">
-            <label for="password">Password</label>
+            <label for="password">Confirm Password</label>
             <input type="password" class = "form-control" id = "password" name = "password_confirmation" required>
             @error('password_confirmation')
                 <p class="text-danger mt-1">{{$message}}</p>    

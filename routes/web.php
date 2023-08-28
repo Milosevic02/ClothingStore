@@ -25,4 +25,6 @@ Route::get('/products/{product}',[ProductController::class,'show']);
 //Show Register Form
 Route::get('/register',[UserController::class,'register']);
 
+//Create new User
+Route::post('/users',[UserController::class,'store']);
 
