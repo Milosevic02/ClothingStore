@@ -31,8 +31,12 @@ class ProductController extends Controller
             'name' => ['required','min:5'],
             'tags' => 'required',
             'price' => 'required|numeric',
-            'size' => ['required','max:4']
+            'size' => ['required','max:4'],
         ]);
+
+        if($request->hasFile('image')){
+            $formFields['image'] = $request->file('image')->store('images','public');
+        }
 
         Product::create($formFields);
 
