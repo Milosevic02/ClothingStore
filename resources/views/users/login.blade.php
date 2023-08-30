@@ -2,7 +2,8 @@
     <div class="row justify-content-center">
         <div class="col-lg-5">
             <h3 class="text-center py-5">Login</h3>
-            <form action="/users/login" method= "POST">
+            <form action="/users/authenticate" method= "POST">
+                @csrf
                 <div class="form-group mb-3">
                     <label for="email">Email address</label>
                     <input type="text" class = "form-control" id = "email" name = "email" value="{{old('email')}}" >
