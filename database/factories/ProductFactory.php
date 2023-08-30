@@ -18,8 +18,9 @@ class ProductFactory extends Factory
     {
         return [
             'name' => $this->faker->sentence(),
-            'tags' => 'majica,crvena,L',
+            'tags' => 'majica,crvena,gucci',
             'price' => $this->faker->randomFloat(2,1,50),
+            'size'=> 'L',
             'image' => null,        
         ];
     }

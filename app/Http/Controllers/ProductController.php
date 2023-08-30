@@ -30,7 +30,8 @@ class ProductController extends Controller
         $formFields = $request->validate([
             'name' => ['required','min:5'],
             'tags' => 'required',
-            'price' => 'required|numeric'
+            'price' => 'required|numeric',
+            'size' => ['required','max:4']
         ]);
 
         Product::create($formFields);

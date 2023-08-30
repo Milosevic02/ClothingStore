@@ -16,6 +16,7 @@ return new class extends Migration
             $table ->string('name');
             $table ->string('tags');
             $table ->float('price');
+            $table ->string('size');
             $table ->string('image')->nullable();
             $table->timestamps();
         });
