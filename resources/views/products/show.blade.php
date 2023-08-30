@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-lg-6">
         <img  src="{{$product->image ? asset('storage/' . $product->image) 
-        :  asset('images/no-image.png')}}" class="image-fluid" style = "height:330px; object-fit:cover;width:450px"  >
+        :  asset('images/no-image.png')}}" class="image-fluid" style = "height:330px; object-fit:cover;width:450px"  />
     </div>
     <div class="col-lg-6">
         <h2>{{$product['name']}}</h2>
@@ -24,7 +24,7 @@
 
         @auth
             @can('admin')
-            <a href="/products/edit" class="btn btn-warning btn-lg" style="margin-right: 10px">
+            <a href="/products/{{$product->id}}/edit" class="btn btn-warning btn-lg" style="margin-right: 10px">
                 <i class="bi bi-pencil"></i> Edit
             </a>
             <a href="/products/delete" class="btn btn-danger btn-lg">

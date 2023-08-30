@@ -25,7 +25,8 @@ Route::get('products/create',[ProductController::class,'create']);
 //Store product data
 Route::post('/products',[ProductController::class,'store']);
 
-
+//Show Edit Product Form
+Route::get('products/{product}/edit',[ProductController::class,'edit']);
 
 
 //Single Products
