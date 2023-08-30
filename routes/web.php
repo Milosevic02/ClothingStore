@@ -19,6 +19,9 @@ use App\Http\Controllers\ProductController;
 //All Products
 Route::get('/', [ProductController::class,'index']);
 
+//Show Create Product Form
+Route::get('products/create',[ProductController::class,'create']);
+
 //Single Products
 Route::get('/products/{product}',[ProductController::class,'show']);
 
@@ -36,3 +39,5 @@ Route::get('/login',[UserController::class,'login'])->middleware('guest');
 
 //Log in User
 Route::post('users/authenticate',[UserController::class,'authenticate']);
+
+
