@@ -9,6 +9,7 @@
             <div class="col-md-8">
                 <h3 class="h4">{{ $product->name }}</h3>
                 <div class="h5 font-weight-bold mb-3">${{ $product->price }}</div>
+                <div class="h5 font-weight-bold mb-3">Size: {{ $product->size }}</div>
                 <x-tags :tagsCsv="$product->tags" />
                 <div class="mt-3">
                     <a href="/products/{{ $product->id }}" class="btn btn-primary">View Product</a>

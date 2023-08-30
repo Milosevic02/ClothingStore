@@ -28,5 +28,13 @@
                 @enderror
             </div>
 
+            <div class="form-group mb-3">
+                <label for="size">Size</label>
+                <input type="text" class = "form-control" id = "size" name = "size" value="{{old('size')}}">
+                @error('size')
+                    <p class="text-danger mt-1">{{$message}}</p>    
+                @enderror
+            </div>
+
             <button type="submit" class="btn btn-primary">Add product</button>
 </x-header>

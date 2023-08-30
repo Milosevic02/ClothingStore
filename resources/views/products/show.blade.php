@@ -16,6 +16,10 @@
             <p style="font-weight: bold;">Price: ${{$product['price']}}</p>
 
         </h5>
+        <h5>
+            <p style="font-weight: bold;">Size: {{$product['size']}}</p>
+
+        </h5>
         <form action="" method = "post">
             <input type="number" name="quantity" required style="background-color: #f1f1f1; border: 1px solid #ccc; padding: 5px;">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >Add to Cart</button>
