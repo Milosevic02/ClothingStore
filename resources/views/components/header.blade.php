@@ -35,23 +35,32 @@
                             Welcome <span style="margin-right: 10px;color: red;">{{ auth()->user()->name }}</span>
                         </span>
                     </li>
-                    
-                    <li class="nav-item">
-                        <a href="/products/myorders" class="nav-link">
-                            <i class="bi bi-person-plus"></i> <span style="font-weight: bold;">My Orders</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/products/cart" class="nav-link">
-                            <i class="bi bi-person"></i> <span style="font-weight: bold;">Cart</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <form action="/logout" method="POST">
-                            @csrf
-                            <button class="btn btn-danger" type="submit">Logout</button>
-                        </form>
-                    </li>
+
+                        @can('admin')
+                            <li class="nav-item">
+                                <a href="/products/manage" class="nav-link">
+                                    <i class="bi bi-person"></i> <span style="font-weight: bold;">Manage Product</span>
+                                </a>
+                            </li>
+                        @else
+                            <li class="nav-item">
+                                <a href="/products/cart" class="nav-link">
+                                    <i class="bi bi-person"></i> <span style="font-weight: bold;">Cart</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/products/myorders" class="nav-link">
+                                    <i class="bi bi-person-plus"></i> <span style="font-weight: bold;">My Orders</span>
+                                </a>
+                            </li>
+                        @endcan
+
+                        <li class="nav-item">
+                            <form action="/logout" method="POST">
+                                @csrf
+                                <button class="btn btn-danger" type="submit">Logout</button>
+                            </form>
+                        </li>
                     @else
                     <li class="nav-item">
                         <a href="/register" class="nav-link">
