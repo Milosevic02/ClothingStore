@@ -22,6 +22,12 @@ Route::get('/', [ProductController::class,'index']);
 //Show Create Product Form
 Route::get('products/create',[ProductController::class,'create']);
 
+//Store product data
+Route::post('/products',[ProductController::class,'store']);
+
+
+
+
 //Single Products
 Route::get('/products/{product}',[ProductController::class,'show']);
 

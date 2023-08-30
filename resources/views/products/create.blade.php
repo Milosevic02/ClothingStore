@@ -1,7 +1,8 @@
 <x-header>
     <div class="container">
         <h1 class="mt-5 mb-3">Add Product</h1>
-        <form method="post" action="/">
+        @csrf
+        <form method="post" action="/products">
             @csrf
             <div class="form-group mb-3">
                 <label for="name">Product Name</label>
@@ -20,9 +21,9 @@
             </div>
     
             <div class="form-group mb-3">
-                <label for="Price">Price</label>
-                <input type="Price" class = "form-control" id = "Price" name = "Price" value="{{old('password')}}">
-                @error('Price')
+                <label for="price">Price</label>
+                <input type="text" class = "form-control" id = "price" name = "price" value="{{old('price')}}">
+                @error('price')
                     <p class="text-danger mt-1">{{$message}}</p>    
                 @enderror
             </div>

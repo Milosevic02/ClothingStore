@@ -26,5 +26,18 @@ class ProductController extends Controller
         return view('products.create');
     }
 
+    public function store(Request $request){
+        $formFields = $request->validate([
+            'name' => ['required','min:5'],
+            'tags' => 'required',
+            'price' => 'required|numeric'
+        ]);
+
+        Product::create($formFields);
+
+        return redirect('/')->with('message','Product created successfully');
+
+    }
+
 
 }
