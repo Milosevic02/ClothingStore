@@ -28,6 +28,13 @@ Route::post('/products',[ProductController::class,'store']);
 //Show Edit Product Form
 Route::get('products/{product}/edit',[ProductController::class,'edit']);
 
+//Update Product data
+Route::put('products/{product}',[ProductController::class,'update']);
+
+
+
+
+
 
 //Single Products
 Route::get('/products/{product}',[ProductController::class,'show']);

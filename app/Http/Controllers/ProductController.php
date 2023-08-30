@@ -48,5 +48,23 @@ class ProductController extends Controller
         return view('products.edit',['product' => $product]);
     }
 
+    public function update(Request $request,Product $product){
+
+        $formFields = $request->validate([
+            'name' => ['required','min:5'],
+            'tags' => 'required',
+            'price' => 'required|numeric',
+            'size' => ['required','max:4'],
+        ]);
+
+        if($request->hasFile('image')){
+            $formFields['image'] = $request->file('image')->store('images','public');
+        }
+
+        $product->update($formFields);
+
+        return back()->with('message','Product updated successfully!');
+    }
+
 
 }
