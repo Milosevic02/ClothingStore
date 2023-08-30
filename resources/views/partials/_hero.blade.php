@@ -9,9 +9,21 @@
             Find the best items for yourself
         </p>
         <div>
-            <a href="register.html" class="mb-4 btn btn-outline-light py-2 px-4 rounded-xl text-uppercase mt-2 hover-text-black hover-border-black">
-                Sign Up to make an order
-            </a>
+            @auth
+                @can('admin')
+
+                    <a href="/products/create" class="mb-4 btn btn-lg btn-outline-light py-2 px-4 rounded-xl text-uppercase mt-2 hover-text-black hover-border-black">
+                        Create new Product
+                    </a>
+                @endcan
+            @else
+                <a href="/register" class="mb-4 btn btn-outline-light py-2 px-4 rounded-xl text-uppercase mt-2 hover-text-black hover-border-black">
+                    Sign Up to make an order
+                </a>
+            @endauth
+
+
+
         </div>
     </div>
 </section>
