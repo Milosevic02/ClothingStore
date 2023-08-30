@@ -6,7 +6,8 @@
 <div class="container">
 <div class="row">
     <div class="col-lg-6">
-        <img  src="{{ asset('images/no-image.png') }}" class="image-fluid" style = "height:330px; object-fit:cover;width:450px"  >
+        <img  src="{{$product->image ? asset('storage/' . $product->image) 
+        :  asset('images/no-image.png')}}" class="image-fluid" style = "height:330px; object-fit:cover;width:450px"  >
     </div>
     <div class="col-lg-6">
         <h2>{{$product['name']}}</h2>
