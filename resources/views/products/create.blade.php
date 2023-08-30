@@ -2,7 +2,7 @@
     <div class="container">
         <h1 class="mt-5 mb-3">Add Product</h1>
         @csrf
-        <form method="post" action="/products">
+        <form method="post" action="/products" enctype="multipart/form-data">
             @csrf
             <div class="form-group mb-3">
                 <label for="name">Product Name</label>
@@ -32,6 +32,14 @@
                 <label for="size">Size</label>
                 <input type="text" class = "form-control" id = "size" name = "size" value="{{old('size')}}">
                 @error('size')
+                    <p class="text-danger mt-1">{{$message}}</p>    
+                @enderror
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="image">Size</label>
+                <input type="file" class = "form-control" id = "image" name = "image" value="{{old('image')}}">
+                @error('image')
                     <p class="text-danger mt-1">{{$message}}</p>    
                 @enderror
             </div>
