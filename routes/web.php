@@ -23,16 +23,16 @@ Route::get('/', [ProductController::class,'index']);
 Route::get('/products/{product}',[ProductController::class,'show']);
 
 //Show Register Form
-Route::get('/register',[UserController::class,'register']);
+Route::get('/register',[UserController::class,'register'])->middleware('guest');
 
 //Create new User
 Route::post('/users',[UserController::class,'store']);
 
 //Log User out
-Route::post('/logout',[UserController::class,'logout']);
+Route::post('/logout',[UserController::class,'logout'])->middleware('auth');
 
 //Show login Form
-Route::get('/login',[UserController::class,'login']);
+Route::get('/login',[UserController::class,'login'])->middleware('guest');
 
 //Log in User
 Route::post('users/authenticate',[UserController::class,'authenticate']);
