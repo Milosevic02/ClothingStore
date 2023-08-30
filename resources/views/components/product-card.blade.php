@@ -4,7 +4,8 @@
     <div class="card border rounded p-4">
         <div class="row">
             <div class="col-md-4">
-                <img class="w-100" src="{{ asset('images/no-image.png') }}" alt="">
+                <img class="w-100" src="{{$product->image ? asset('storage/' . $product->image) 
+                                    :  asset('images/no-image.png')}}" alt="">
             </div>
             <div class="col-md-8">
                 <h3 class="h4">{{ $product->name }}</h3>
