@@ -24,13 +24,18 @@
 
         @auth
             @can('admin')
-            <a href="/products/{{$product->id}}/edit" class="btn btn-warning btn-lg" style="margin-right: 10px">
-                <i class="bi bi-pencil"></i> Edit
-            </a>
-            <a href="/products/delete" class="btn btn-danger btn-lg">
-                <i class="bi bi-trash"></i> Delete
-            </a>
-            
+            <div class="d-flex">
+                <a href="/products/{{$product->id}}/edit" class="btn btn-warning btn-lg" style="margin-right: 10px">
+                    <i class="bi bi-pencil"></i> Edit
+                </a>
+                <form method="POST" action="/products/{{$product->id}}">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger btn-lg">
+                        <i class="bi bi-trash"></i> Delete
+                    </button>
+                </form>     
+            </div> 
             @else
                 <form action="" method = "post">
                     @csrf

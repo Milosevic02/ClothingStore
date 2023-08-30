@@ -31,10 +31,8 @@ Route::get('products/{product}/edit',[ProductController::class,'edit']);
 //Update Product data
 Route::put('products/{product}',[ProductController::class,'update']);
 
-
-
-
-
+//Delete Product
+Route::delete('products/{product}',[ProductController::class,'destroy']);
 
 //Single Products
 Route::get('/products/{product}',[ProductController::class,'show']);
