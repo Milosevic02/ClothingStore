@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -54,5 +55,8 @@ Route::get('/login',[UserController::class,'login'])->middleware('guest');
 
 //Log in User
 Route::post('users/authenticate',[UserController::class,'authenticate']);
+
+//Add to cart
+Route::post('/carts/{product}',[CartController::class,'store']);
 
 
