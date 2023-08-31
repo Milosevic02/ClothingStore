@@ -45,7 +45,7 @@
                             </li>
                         @else
                             <li class="nav-item">
-                                <a href="/products/cart" class="nav-link">
+                                <a href="/carts" class="nav-link">
                                     <i class="bi bi-cart"></i> <span style="font-weight: bold;">Cart</span>
                                 </a>
                             </li>
