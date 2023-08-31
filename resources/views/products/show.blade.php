@@ -37,9 +37,9 @@
                 </form>     
             </div> 
             @else
-                <form action="" method = "post">
+                <form action="/carts/{{$product->id}}" method = "post">
                     @csrf
-                    <input type="number" name="quantity" required style="background-color: #f1f1f1; border: 1px solid #ccc; padding: 5px;">
+                    <input type="number" step="1" name="quantity" required style="background-color: #f1f1f1; border: 1px solid #ccc; padding: 5px;">
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >Add to Cart</button>
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
