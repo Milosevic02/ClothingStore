@@ -34,6 +34,9 @@ Route::put('products/{product}',[ProductController::class,'update']);
 //Delete Product
 Route::delete('products/{product}',[ProductController::class,'destroy']);
 
+//Manage Product
+Route::get('products/manage',[ProductController::class,'manage']);
+
 //Single Products
 Route::get('/products/{product}',[ProductController::class,'show']);
 

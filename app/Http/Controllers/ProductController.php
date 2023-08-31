@@ -71,5 +71,9 @@ class ProductController extends Controller
         return redirect('/')->with('message','Listing Deleted Successfully!');
     }
 
+    public function manage(){
+        return view('products.manage',['products' =>Product::latest()->get()]);
+    }
+
 
 }
