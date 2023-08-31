@@ -46,12 +46,12 @@
                         @else
                             <li class="nav-item">
                                 <a href="/products/cart" class="nav-link">
-                                    <i class="bi bi-person"></i> <span style="font-weight: bold;">Cart</span>
+                                    <i class="bi bi-cart"></i> <span style="font-weight: bold;">Cart</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="/products/myorders" class="nav-link">
-                                    <i class="bi bi-person-plus"></i> <span style="font-weight: bold;">My Orders</span>
+                                    <i class="bi bi-receipt"></i> <span style="font-weight: bold;">My Orders</span>
                                 </a>
                             </li>
                         @endcan
